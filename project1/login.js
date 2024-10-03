@@ -7,36 +7,37 @@ function displayMessage(message, isSuccess) {
 }
 
 
-document.getElementById('Go').addEventListener('click', function(event) {
-    event.preventDefault(); 
-    const username = document.getElementById('username').value; 
-    const password = document.getElementById('password').value; 
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
 
-    if (username && password) {
-       
-        fetch('/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json' 
-            },
-            body: JSON.stringify({ username, password })
-        })
-        .then(response => response.json()) 
-        .then(data => {
-            if (data.success) {
-                displayMessage('¡Login succesfully!', true); 
-                setTimeout(() => {
-                    window.location.href = 'web.html'; // Redireccionar
-                }, 2000);
-            } else {
-                displayMessage('User or password incorrects.', false); // Mostrar mensaje de error
-            }
-        })
-        .catch(err => {
-            console.error('Error:', err); // Mostrar error en la consola
-            displayMessage('Error in the conexion with the server.', false); // Mostrar mensaje de error
-        });
-    } else {
-        displayMessage('Ples, fill in the fields.', false); // Mensaje si los campos están vacíos
-    }
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('/login', { 
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const messageDiv = document.getElementById('message');
+        if (data.success) {
+            messageDiv.innerText = 'Login successful! Redirecting...';
+            messageDiv.style.color = 'green'; 
+            setTimeout(() => {
+                window.location.href = 'web.html';
+            }, 2000);
+        } else {
+            messageDiv.innerText = data.message;
+            messageDiv.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('message').innerText = 'An error occurred during login.';
+        document.getElementById('message').style.color = 'red';
+    });
 });
+
