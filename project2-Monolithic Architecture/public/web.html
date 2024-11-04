@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowsports Fitness & Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.jfif" alt="Snowsports Logo" class="logo-img">
+                <h1>Snowsports Fitness</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#workouts">Workouts</a></li>
+                <li><a href="#nutrition-tips">Nutrition</a></li>
+                <li><a href="#track-progress">Progress</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h2>Train Hard, Ski Harder</h2>
+            <p>Enhance your skiing and snowboarding skills with targeted workouts and nutrition plans.</p>
+            <a href="#workouts" class="btn">Explore Workouts</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About Snowsports Fitness</h2>
+            <p>Our mission is to provide tailored fitness and nutrition programs to help skiing and snowboarding enthusiasts improve their performance on the slopes.</p>
+        </div>
+    </section>
+
+    <!-- Workouts Section -->
+    <section id="workouts" class="services">
+        <div class="container">
+            <h2>Workout Programs</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and power for explosive movements on the slopes.</p>
+                    <button class="workout-btn" data-workout="Strength Training">View Exercises</button>
+                </div>
+                <div class="card">
+                    <h3>Balance & Agility</h3>
+                    <p>Enhance your stability and control with targeted balance exercises.</p>
+                    <button class="workout-btn" data-workout="Balance & Agility">View Exercises</button>
+                </div>
+                <div class="card">
+                    <h3>Flexibility & Stretching</h3>
+                    <p>Improve your range of motion to prevent injuries and enhance performance.</p>
+                    <button class="workout-btn" data-workout="Flexibility & Stretching">View Exercises</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section to display the exercises -->
+        <div id="exercise-list"></div>
+    </section>
+
+    <!-- Nutrition Tips Section -->
+    <section id="nutrition-tips" class="section-nutrition">
+        <div class="container">
+            <h2>Nutrition Tips</h2>
+            <p>Explore our expert tips to improve your diet and nutrition for a healthier lifestyle.</p>
+            <div class="tips-cards">
+                <div class="tip-card">
+                    <img src="img/food.jpg" alt="Healthy Food" class="tip-img">
+                    <h3>Eat a Balanced Diet</h3>
+                    <p>Incorporate a variety of foods from all food groups for balanced nutrition.</p>
+                </div>
+                <div class="tip-card">
+                    <img src="img/water.png" alt="Hydration" class="tip-img">
+                    <h3>Stay Hydrated</h3>
+                    <p>Drinking enough water is essential for overall health and wellness.</p>
+                </div>
+                <div class="tip-card">
+                    <img src="img/Meal2.jpg" alt="Meal Planning" class="tip-img">
+                    <h3>Plan Your Meals</h3>
+                    <p>Meal planning helps you stick to healthy eating and avoid unnecessary snacking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Your Progress Section -->
+    <section id="track-progress" class="section-progress">
+        <div class="container">
+            <h2>Track Your Progress</h2>
+            <p>Monitor your fitness journey and stay motivated with our easy-to-use tracking tools.</p>
+            <div class="progress-cards">
+                <div class="progress-card">
+                    <img src="img/goal.png" alt="Fitness Tracking" class="progress-img">
+                    <h3>Set Realistic Goals</h3>
+                    <p>Define achievable fitness goals to stay on track and celebrate milestones.</p>
+                </div>
+                <div class="progress-card">
+                    <img src="img/trackdata.webp" alt="Track Data" class="progress-img">
+                    <h3>Track Your Data</h3>
+                    <p>Use our app to log your workouts, meals, and progress over time.</p>
+                </div>
+                <div class="progress-card">
+                    <img src="img/consistency.jfif" alt="Stay Consistent" class="progress-img">
+                    <h3>Stay Consistent</h3>
+                    <p>Consistency is key to achieving your long-term health and fitness goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snowsports Fitness</p>
+    </footer>
+<script src="workouts.js"></script>
+</body>
+</html>
