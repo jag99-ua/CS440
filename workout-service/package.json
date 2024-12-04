@@ -1,0 +1,12 @@
+{
+  "name": "workout-service",
+  "version": "1.0.0",
+  "description": "Workout Service to retrieve workout data",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

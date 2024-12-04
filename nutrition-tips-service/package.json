@@ -1,0 +1,12 @@
+{
+  "name": "nutrition-tips-service",
+  "version": "1.0.0",
+  "description": "Nutrition Tips Service to provide healthy tips",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

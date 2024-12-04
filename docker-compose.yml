@@ -1,0 +1,25 @@
+version: '3'
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - authentication-service
+      - workout-service
+      - nutrition-tips-service
+  
+  authentication-service:
+    build: ./authentication-service
+    ports:
+      - "3000:3000"
+  
+  workout-service:
+    build: ./workout-service
+    ports:
+      - "3001:3001"
+  
+  nutrition-tips-service:
+    build: ./nutrition-tips-service
+    ports:
+      - "3002:3002"
